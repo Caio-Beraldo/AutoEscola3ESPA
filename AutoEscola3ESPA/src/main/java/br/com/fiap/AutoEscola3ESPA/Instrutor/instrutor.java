@@ -37,5 +37,21 @@ public class instrutor {
     }
 
 
-
+    public void atualizarInformacoes(DadosAtualizacaoInstrutor dados) {
+        if(dados.nome() != null && dados.nome().isBlank()){
+            this.nome = dados.nome();
+        }
+        if(dados.email() != null && dados.email().isBlank()){
+            this.email = dados.email();
+        }
+        if(dados.especialidade() != null && dados.especialidade().isBlank()){
+            this.especialidade = dados.especialidade();
+        }
+        if(dados.telefone() != null && dados.telefone().isBlank()){
+            this.telefone = dados.telefone();
+        }
+        if(dados.endereco() != null){
+            endereco.atualizarInformacoes(dados.endereco());
+        }
+    }
 }
